@@ -13,6 +13,7 @@
 #include <ctype.h>
 #include <mecab.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 static void
 mrb_mecab_free(mrb_state *mrb, void *p) {
