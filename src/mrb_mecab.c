@@ -87,9 +87,9 @@ void
 mrb_mruby_mecab_gem_init(mrb_state* mrb) {
   struct RClass* _class_mecab = mrb_define_class(mrb, "Mecab", mrb->object_class);
   MRB_SET_INSTANCE_TT(_class_mecab, MRB_TT_DATA);
-  mrb_define_method(mrb, _class_mecab, "initialize", mrb_mecab_init, ARGS_OPT(1));
-  mrb_define_method(mrb, _class_mecab, "sparse_tostr", mrb_mecab_sparse_tostr, ARGS_REQ(1) | ARGS_OPT(1));
-  mrb_define_method(mrb, _class_mecab, "sparse_toary", mrb_mecab_sparse_toary, ARGS_REQ(1) | ARGS_OPT(1));
+  mrb_define_method(mrb, _class_mecab, "initialize", mrb_mecab_init, MRB_ARGS_OPT(1));
+  mrb_define_method(mrb, _class_mecab, "sparse_tostr", mrb_mecab_sparse_tostr, MRB_ARGS_REQ(1) | MRB_ARGS_OPT(1));
+  mrb_define_method(mrb, _class_mecab, "sparse_toary", mrb_mecab_sparse_toary, MRB_ARGS_REQ(1) | MRB_ARGS_OPT(1));
 }
 
 void
